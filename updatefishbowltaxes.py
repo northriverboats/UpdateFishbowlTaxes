@@ -43,10 +43,10 @@ def do_it_all(file_name):
 
     # create database connection we will leave open till we are done with things
     con = fdb.connect(
-      host=os.environ.get('HOST'),
-      database=os.environ.get('DATABASE'),
-      user=os.environ.get('USER'),
-      password=os.environ.get("PASSWORD"),
+      host=os.environ.get('DB_HOST'),
+      database=os.environ.get('DB_DATABASE'),
+      user=os.environ.get('DB_USER'),
+      password=os.environ.get("DB_PASSWORD"),
       charset='WIN1252'
     )
     cur = con.cursor()
